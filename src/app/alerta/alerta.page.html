@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar  class="new-background-color">
+    <ion-title>
+      Alerta   
+    </ion-title>
+    <ion-button slot="end" (click)="openMenu()">
+      <ion-icon  name="menu-outline"></ion-icon>     
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-item>
+    <ion-label>Entidad</ion-label>
+    <ion-select [(ngModel)]="entidad" value="" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="Vital Time">Vital Time</ion-select-option>
+      <ion-select-option value="MOP">MOP</ion-select-option>
+      <ion-select-option value="Carabineros">Carabineros</ion-select-option>
+      <ion-select-option value="SAMU">SAMU</ion-select-option>
+      <ion-select-option value="Bomberos">Bomberos</ion-select-option>
+      <ion-select-option value="PDI">PDI</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <button class="alerta" (click)="alerta()" > Alertar </button>
+
+  <div *ngIf="inicio"  style="text-align: center;">
+    <p>se enviará una alerta a personal de {{entidad}} en:</p>
+    <h1>{{segundos}}</h1>
+    <p>si desea cancelar haga click en el siguiente boton</p>
+    <ion-button expand="full" color="primary" (click)="cancelar()" > Cancelar </ion-button>
+  </div>
+  
+</ion-content>

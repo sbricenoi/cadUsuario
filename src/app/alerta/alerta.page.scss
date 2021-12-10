@@ -1,0 +1,27 @@
+.new-background-color{
+  --background: #5501bc;
+}
+ion-content {
+  --background: transparent; 
+}
+ion-toolbar ion-button{
+  --background:transparent;
+}
+ion-title.md.title-default.hydrated {
+  color: #fff;
+  text-align: left;
+}
+
+.alerta {
+  background: red;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: xx-large;
+  margin: 10% 0 0px 25%;
+}
+button:hover {
+  background: #f44336;
+}
+

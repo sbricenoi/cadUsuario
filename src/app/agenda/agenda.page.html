@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agenda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid class="container">
+    <ion-row class="ion-align-items-center ion-justify-content-center">
+      <ion-col size="6">
+        <div *ngFor="let empresa of empresas">
+          <ion-card type="button">
+            <ion-card-content>
+              <ion-card-title color="black"> {{empresa.nombre_empresa}} </ion-card-title>
+              <ion-img src="http://cad.onlineweb.cl/{{empresa.logo_empresa}}"></ion-img>
+            </ion-card-content>
+
+            <ion-list>
+
+              <ion-item>
+                <ion-label>Sucursal</ion-label>
+                <ion-select placeholder="Select One">
+                  <ion-select-option value="f">Female</ion-select-option>
+                  <ion-select-option value="m">Male</ion-select-option>
+                </ion-select>
+              </ion-item>
+
+            </ion-list>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

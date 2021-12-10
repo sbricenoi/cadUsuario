@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "CAD",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

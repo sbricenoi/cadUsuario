@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-icon color="black" name="person-outline"></ion-icon>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="assets/qr.png">
+  <ion-item>
+    <ion-text>Nombre: {{user.resultado.data[0].nombre_persona}}</ion-text><br>
+    <ion-text>Apellido: {{user.resultado.data[0].apellido_persona}}</ion-text><br>
+    <ion-text>RUT: {{user.resultado.data[0].rut_persona}}</ion-text><br>
+    <ion-text>Correo: {{user.resultado.data[0].correo_persona}}</ion-text><br>
+    <ion-text>Telefono {{user.resultado.data[0].telefono_persona}}</ion-text><br>
+  </ion-item>
+</ion-content>

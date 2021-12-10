@@ -1,0 +1,11 @@
+.new-background-color {
+  --background: #5501bc;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  
+}

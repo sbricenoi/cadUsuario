@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Home CAD</ion-title>
+        <ion-buttons slot="primary">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
+    <!-- <ion-item>
+      <ion-avatar slot="end">
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+      <ion-label slot="end" [routerLink]="['/perfil']">{{user.resultado.data[0].nombre_persona}}</ion-label>
+    </ion-item> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+     <img src="{{imgqr}}">
+  </ion-item>
+  <ion-item>
+    <ion-text>Nombre: {{user.resultado.persona.nombre_persona}}</ion-text>
+  </ion-item>
+  <ion-item>
+    <ion-text>Apellido: {{user.resultado.persona.apellido_persona}}</ion-text>
+  </ion-item>
+  <ion-item>
+    <ion-text>RUN: {{user.resultado.persona.rut_persona}}</ion-text>
+  </ion-item>
+  <ion-item>
+    <ion-text>Correo: {{user.resultado.persona.correo_persona}}</ion-text>
+  </ion-item>
+  <ion-item>
+    <ion-text>Teléfono: {{user.resultado.persona.telefono_persona}}</ion-text>
+  </ion-item>
+</ion-content>
+
+

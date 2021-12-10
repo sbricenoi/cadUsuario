@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Formulario de Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<form #formRegistro="ngForm" (ngSubmit)="registroForm()" class="registro">
+  <ion-item>
+    <ion-label>RUT</ion-label>
+    <ion-input [(ngModel)]="registro.rut" name="txtRut" placeholder="Ingresa tu rut" type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input [(ngModel)]="registro.nombre" name="txtNombre" placeholder="Ingresa tu nombre" type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Apellido</ion-label>
+    <ion-input [(ngModel)]="registro.apellido" name="txtApellido" placeholder="Ingresa tu apellido" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Correo</ion-label>
+    <ion-input [(ngModel)]="registro.correo" name="txtCorreo" type="email" placeholder="Ingresa tu correo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Confirmación de correo</ion-label>
+    <ion-input [(ngModel)]="correo2" name="txtCorreo2" type="email" placeholder="Confirma tu correo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Dirección</ion-label>
+    <ion-input [(ngModel)]="calle" name="txtCalle" placeholder="Calle"></ion-input>
+    <ion-input [(ngModel)]="numero" name="txtNumero" placeholder="número"></ion-input>
+    <ion-input [(ngModel)]="depto" name="txtDepto" placeholder="Depto"></ion-input>
+    <ion-input [(ngModel)]="registro.comuna" name="txtComuna" placeholder="Comuna"></ion-input>
+    <ion-input [(ngModel)]="registro.ciudad" name="txtCiudad" placeholder="Ciudad"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Contraseña</ion-label>
+    <ion-input [(ngModel)]="registro.pass" name="txtPass1" placeholder="contraseña" type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Confirme su Contraseña</ion-label>
+    <ion-input [(ngModel)]="pass2" name="txtPass2" placeholder="Confirme su Contraseña" type="password"></ion-input>
+  </ion-item>
+<br>
+<ion-button type="submit">Confirmar</ion-button>
+</form>
+</ion-content>
+
+

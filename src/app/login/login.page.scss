@@ -1,0 +1,48 @@
+ion-card.md.hydrated {
+  padding: 30px;
+  background: transparent;
+  border:#5501bc solid 2px;
+  border-radius: 10px 10px 10px 10px;
+  margin: 30px 15px;
+}
+ion-content{
+  --ion-background-color:#5501bc;
+  --background: #fff;
+  --ion-color:#fff;
+}
+ion-button {
+  --background: #f3f3f3;
+  --color: #c200d4;
+}
+ion-label {
+  --color: rgb(8, 7, 7);
+}
+
+ion-item.item-has-focus > ion-label{
+  color:#5501bc!important;
+}
+ion-item.item-has-focus {
+  color:#5501bc!important;
+}
+ion-item > ion-label{
+  color:#5501bc!important;
+}
+ion-item .login-input{
+  --background:transparent !important;
+}
+ion-item{
+  --background:transparent !important;
+}
+ion-item.item.md.ion-focusable.hydrated.item-label.item-label-floating.item-interactive.item-input {
+  margin-bottom: 15px;
+}
+ion-content img {
+  width: 80%;
+  margin: 10%;
+}
+ion-item.item-highlight, .item-inner-highlight {
+  --background: #5501bc!important;
+}
+.new-background-color{
+  --background: #5501bc;
+}
