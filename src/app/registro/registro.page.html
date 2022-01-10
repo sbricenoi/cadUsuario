@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-button (click)="login()">a</ion-button>
     </ion-buttons>
     <ion-title>Formulario de Registro</ion-title>
   </ion-toolbar>
@@ -9,7 +9,7 @@
 
 
 <ion-content>
-<form #formRegistro="ngForm" (ngSubmit)="registroForm()" class="registro">
+<form  class="registro">
   <ion-item>
     <ion-label>RUT</ion-label>
     <ion-input [(ngModel)]="registro.rut" name="txtRut" placeholder="Ingresa tu rut" type="text" ></ion-input>
@@ -47,7 +47,7 @@
     <ion-input [(ngModel)]="pass2" name="txtPass2" placeholder="Confirme su Contraseña" type="password"></ion-input>
   </ion-item>
 <br>
-<ion-button type="submit">Confirmar</ion-button>
+<ion-button (click)="registroForm()">Confirmar</ion-button>
 </form>
 </ion-content>
 

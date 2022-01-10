@@ -1,5 +1,7 @@
+import { RegistroPage } from './registro/registro.page';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LoginPage } from './login/login.page';
 
 // const routes: Routes = [
 //   {
@@ -47,8 +49,20 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'',
-    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
+    path: '',
+    component: LoginPage
+  },
+  {
+    path: 'login',
+    component: LoginPage
+  },
+  {
+    path: 'registro',
+    component: RegistroPage
+  },
+  {
+    path: '',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule),
   },
   {
     path: 'calendario',

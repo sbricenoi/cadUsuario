@@ -20,7 +20,7 @@ export class RegistroPage implements OnInit {
     ciudad: '',
     direccion: '',
     fecha_nac: '',
-    avatar: 'No tengo',
+    avatar: '',
     accion: 'registro',
   };
 
@@ -46,31 +46,35 @@ export class RegistroPage implements OnInit {
     }
 
   registroForm() {
-    if (
+    console.log("registro")
+    console.log(this.registro)
+    /*if (
       this.correo2 === this.registro.correo &&
       this.pass2 === this.registro.pass
-    ) {
-      this.registro.direccion = this.calle + this.numero + this.depto;
+    ) {*/
+      this.registro.direccion = this.calle + " " + this.numero + " " + this.depto;
       let headers = new HttpHeaders().set('Content-type', 'application/json');
       headers.append('Access-Control-Allow-Origin', 'http://localhost:8100');
       headers.append('Access-Control-Allow-Credentials', 'true');
       let params = JSON.stringify(this.registro);
       this.http
-        .post<any>('https://cad.onlineweb.cl/api.php', params, {
+        .post<any>('https://cad.onlineweb.cl/prueba_api_sb.php', params, {
           headers: headers,
         })
         .subscribe((res) => {
           console.log(res);
           if (res.message != 'Error') {
-
-            this.router.navigate(['cad/home-cad']);
-          } else {
-           
+            localStorage.setItem('user',JSON.stringify(res.resultado.persona));
+            this.router.navigate(['/tabs/home']);
+          } else {           
             this.alerta_error();
           }
         });
-    }
+    //}
   }
 
   ngOnInit() {}
+  login(){
+    this.router.navigate(["/login"])
+  }
 }
